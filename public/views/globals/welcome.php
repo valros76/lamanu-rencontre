@@ -1,6 +1,6 @@
 <?php
 if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
-   header('Location:?user=user_profile');
+   header('Location:?user=lovers');
 }
 $headTitle = "Welcome - Rencontre - La manu";
 $pageTitle = "Welcome";
@@ -15,7 +15,7 @@ ob_start();; ?>
       Pour utiliser pleinement notre service, merci de <a href="?user=user_inscription" class="inline-links">créer un compte</a> en cliquant sur le lien d'inscription.
    </p>-->
    <video src="public/assets/videos/montage_video_lamanurencontre.webm" class="welcome-video" muted controls></video>
-   <form action="?user=user_register" method="post" class="inscription-form">
+   <form action="?user_action=user_register" method="post" class="inscription-form">
       <div class="inscription-formgroup formgroup-1">
          <label for="lastname">*Nom :</label>
          <input type="text" name="lastname" id="lastname" placeholder="Doe" required />
@@ -38,6 +38,8 @@ ob_start();; ?>
       <input type="number" min="00001" max="99999" name="cp" id="cp" placeholder="16000" required />
       <label for="email">*Email :</label>
       <input type="email" name="email" id="email" placeholder="test@mail.fr" required />
+      <label for="password">*Password :</label>
+      <input type="password" name="password" id="password" placeholder="********" required />
       <label for="search">*Vous cherchez :</label>
       <select name="search" id="search" required>
          <option value="homme">Un homme</option>

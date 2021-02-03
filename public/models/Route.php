@@ -20,6 +20,8 @@ class Route
                $dir_path = 'public/views/globals/';
                break;
             case 'error':
+               $dir_path = 'public/views/errors/';
+            break;
             default:
                $dir_path = 'public/views/errors/';
                $slug = '404';

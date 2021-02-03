@@ -287,6 +287,8 @@ h2,h3,h4,h5,h6{
 }
 
 .user-profile{
+   width:calc(100% - 2em);
+   margin:1em auto;
    display:grid;
    grid-template-columns:repeat(3,minmax(10px, 1fr));
    grid-auto-rows:minmax(10px, auto);
@@ -393,6 +395,6 @@ h2,h3,h4,h5,h6{
    background-color:var(--debug-male);
    color:#fff;
    font-size:16px;
-   font-weight:500;
+   font-weight:600;
    text-shadow:1px 0.5px 1px #000;
 }

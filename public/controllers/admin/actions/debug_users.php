@@ -204,6 +204,22 @@ function createDebugLovers()
             'description' => 'Je suis une femme qui ...'
          ],
    ];
+   $json_path = 'public/upload/users.json';
+   $upload_path = 'public/upload';
+   if (!is_dir($upload_path)) {
+      mkdir($upload_path, 0644);
+   }
+   if (!file_exists($json_path)) {
+      $init_tab = [];
+      file_put_contents($json_path, json_encode($init_tab));
+   }
+   //On récupère l'ancien JSON
+   $json_datas = file_get_contents($json_path);
+   $array_json = json_decode($json_datas, true);
+   $array_json[] = $lovers;
+   $new_datas = $array_json;
+   //ajouter les dernières DATAS
+   file_put_contents($json_path, json_encode($new_datas));
    return $lovers;
 }
 
@@ -238,5 +254,3 @@ foreach($all_lovers as $lover => $value){
 }
 $mainContent = ob_get_clean();
 require 'public/templates/base_template.php';
-
-die();
