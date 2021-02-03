@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   width="546.1333"
+   height="546.1333"
+   viewBox="0 0 546.1333 546.1333"
+   sodipodi:docname="cancel.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:export-filename="C:\laragon\www\lamanu-rencontre\public\assets\icons\cancel.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="1.0746435"
+     inkscape:cx="381.07005"
+     inkscape:cy="416.13742"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g10">
+    <path
+       style="fill:#f1e2e6;stroke-width:0.650756"
+       d="m 256.40768,392.42266 c -45.69075,-7.24637 -119.58538,-51.17067 -96.87895,-80.54568 56.30439,-72.84024 -6.79536,-74.45031 12.90936,-103.76893 8.39021,-12.48379 20.72403,-25.18467 32.39598,-33.36012 7.51606,-5.26451 23.6192,-13.23009 32.17279,-15.91459 28.70727,-9.00962 59.56881,-7.06282 86.54133,5.45917 20.07368,9.31921 37.87076,24.45486 49.62534,42.20423 15.94747,27.72431 -55.79857,65.17812 18.63023,87.65573 43.13348,48.46869 -25.06294,61.38784 -52.29802,79.61539 -11.46755,7.67485 -29.08313,14.71836 -44.38644,17.74771 -9.34437,1.84976 -29.75258,2.32796 -38.71162,0.90709 z"
+       id="path878"
+       sodipodi:nodetypes="ssssssccsss"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g855"
+       transform="rotate(90.209246,275.13579,273.29067)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         style="fill:#61005a;stroke-width:1.06667"
+         d="m 161.19902,410.18292 52.71046,-107.26461 57.72705,-27.53374 c 0,0 -38.52101,-23.59747 -57.78151,-35.39621 -25.46699,-24.80074 -49.64625,-51.42362 -73.23819,-75.00194 l 101.24944,45.50501 40.16218,50.55145 23.30448,-49.48272 68.61052,-74.95625 -38.29319,103.14577 -43.98141,34.915 43.51582,29.085 74.42221,72.35033 -103.99183,-44.24871 -24.33834,-42.87882 -38.06165,43.25129 z"
+         id="path857"
+         sodipodi:nodetypes="ccccccccccccccccc"
+         inkscape:export-xdpi="90.37664"
+         inkscape:export-ydpi="90.37664" />
+    </g>
+  </g>
+</svg>
