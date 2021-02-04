@@ -10,6 +10,7 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
          Mes informations
       </h2>
       <?php
+      if($infos != false){
       foreach ($infos as $name => $value) {
          if ($name != 'password' && !empty($value)) {; ?>
             <p><?= $name . ' : ' . $value; ?></p>
@@ -33,6 +34,9 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
                   "";
             }
          }
+      }
+      }else{
+         Route::goTo('error',500);
       }; ?>
    </section>
 <?php

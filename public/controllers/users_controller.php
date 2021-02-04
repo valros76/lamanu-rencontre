@@ -7,7 +7,11 @@ function showUserProfile($id){
       if(in_array($id, array_keys($array_json))){
          $result = $array_json[$id];
       }
-      return $result;
+      if(isset($result) && !empty($result)){
+         return $result;
+      }else{
+         return false;
+      }
    }
    header('Location:?error=500');
 }

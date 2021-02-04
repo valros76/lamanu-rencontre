@@ -15,7 +15,7 @@ if (!empty($email) && !empty($password)) {
       for ($count = 0; $count < count($array_json); $count++) {
          if (in_array($email, $array_json[$count])) {
             $stocked_password = isset($array_json[$count]['password']) && !empty($array_json[$count]['password']) ? $array_json[$count]['password'] : '';
-            createCookie('user_id', $count, time() + 24 * 3600, null, null, false, true);
+            createCookie('user_id', ($count - 1), time() + 24 * 3600, null, null, false, true);
             foreach ($array_json[$count] as $data => $value) {
                if ($data != 'password') {
                   createCookie($data, $value, time() + 24 * 3600, null, null, false, true);
