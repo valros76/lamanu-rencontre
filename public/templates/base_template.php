@@ -35,7 +35,11 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                   <a href="?user=lovers" class="main-menu-links">
                      Lovers
                   </a>
-               </li>';
+               </li><li class="main-menu-items">
+               <a href="?user_action=user_deconnexion" class="main-menu-links">
+                  Déconnexion
+               </a>
+            </li>';
       } else {
          echo '
          <li class="main-menu-items">
