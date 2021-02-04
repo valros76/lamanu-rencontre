@@ -55,11 +55,12 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                </li>';
       }
       if (isset($_COOKIE['admin_id']) && !empty($_COOKIE['admin_id'])) {
-         echo '<li class="main-menu-items">
-                     <a href="?admin_action=create_users" class="main-menu-links">
-                        Create users
-                     </a>
-                  </li>';
+         echo '
+         <li class="main-menu-items">
+               <a href="?admin_action=create_test_users" class="main-menu-links">
+                  Create users
+               </a>
+            </li>';
       }
       echo '</ul>
          </nav>

@@ -3,7 +3,7 @@
 function createDebugLovers()
 {
    $list_debug_passwords = ["test","coucou","lorem123","dontdothat42","xpmadness85Zd"];
-   $password_debug = $list_debug_passwords[rand(0,count($list_debug_passwords))];
+   $password_debug = $list_debug_passwords[rand(0,count($list_debug_passwords)-1)];
    $lovers = [
          [
             "lastname"=>"Doe",
@@ -270,7 +270,9 @@ function createDebugLovers()
    //On récupère l'ancien JSON
    $json_datas = file_get_contents($json_path);
    $array_json = json_decode($json_datas, true);
-   $array_json[] = $lovers;
+   foreach($lovers as $lover){
+      $array_json[] = $lover;
+   }
    $new_datas = $array_json;
    //ajouter les dernières DATAS
    file_put_contents($json_path, json_encode($new_datas));
@@ -300,7 +302,7 @@ foreach($all_lovers as $lover => $value){
       <p>'.$all_lovers[$lover]['age'].'</p>
       <p>'.$all_lovers[$lover]['gender'].'</p>
       <p>'.$all_lovers[$lover]['cp'].'</p>
-      <p>'.$all_lovers[$lover]['mail'].'</p>
+      <p>'.$all_lovers[$lover]['email'].'</p>
       <p>'.$all_lovers[$lover]['search'].'</p>
       <p>'.$all_lovers[$lover]['description'].'</p>
       </div>

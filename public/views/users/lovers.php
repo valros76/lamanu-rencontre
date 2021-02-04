@@ -7,10 +7,10 @@ if (isset($_COOKIE['user_id']) || empty($_COOKIE['user_id'])) {
    ob_start();
 
    foreach ($lovers_list as $lover => $value) {
-      if (in_array('homme', $lovers_list[$lover])) {
+      if (strtolower($lovers_list[$lover]['gender']) === "homme") {
          echo '
       <div class="user-profile male-profile">';
-      } else {
+      }else if(strtolower($lovers_list[$lover]['gender']) === "femme"){
          echo '
       <div class="user-profile female-profile">';
       }
