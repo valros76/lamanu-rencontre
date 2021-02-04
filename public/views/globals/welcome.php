@@ -9,7 +9,7 @@ ob_start();; ?>
 
 <section class="main-sections">
    <h2 class="main-sections-title">
-      Bienvenue sur La Manu Rencontre
+      Bienvenue JEUNE ♥❤ LOVER ❤♥ sur La Manu Rencontre
    </h2>
    <!--<p class="important-para-description">
       Pour utiliser pleinement notre service, merci de <a href="?user=user_inscription" class="inline-links">créer un compte</a> en cliquant sur le lien d'inscription.

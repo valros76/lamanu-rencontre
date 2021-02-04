@@ -4,6 +4,7 @@ $pageTitle = "Lovers";
 if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
    require 'public/controllers/users/actions/show_lovers.php';
    $lovers_list = showLoversFor($_COOKIE['user_id']);
+   $count_users = 0;
    ob_start();
 
    foreach ($lovers_list as $lover => $value) {
@@ -47,15 +48,24 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
          if (isset($lovers_list[$lover]['description'])) {
             echo '<p>Description : ' . $lovers_list[$lover]['description'] . '</p>';
          }
+         echo '
+         <button class="like-button" data-user="'.$_COOKIE['user_id'].'" data-target="'.$count_users.'" disabled>💖</button>
+         <p>Likes : <span class="like-counter" data-user-counter="'.$count_users.'">0</span></p>
+         ';
          echo '</div>';
          if (isset($lovers_list[$lover]['firstname'])) {
-            echo '<a href="?user_action=chat_with&target=' . $lovers_list[$lover]['firstname'] . '" class="user-profile-link">Chatter avec ' . $lovers_list[$lover]['firstname'] . '</a>';
+            echo '
+            <a href="?user_action=chat_with&target=' . $lovers_list[$lover]['firstname'] . '" class="user-profile-link">Chatter avec ' . $lovers_list[$lover]['firstname'] . '</a>';
          }
          echo '</div>';
+         if($count_users < $lovers_list){
+            $count_users++;
+         }
       }
    }
 
    $mainContent = ob_get_clean();
+   $scripts = '<script src="public/sources/js/like.js" defer></script>';
 } else {
 
    header('Location:?globals=welcome');

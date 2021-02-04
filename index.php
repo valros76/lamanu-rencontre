@@ -20,6 +20,7 @@ spl_autoload_register('loadClass');
 $user = isset($_GET['user']) && !empty($_GET['user']) ? validData($_GET['user']) : "";
 $admin = isset($_GET['admin']) && !empty($_GET['admin']) ? validData($_GET['admin']) : "";
 $global = isset($_GET['global']) && !empty($_GET['global']) ? validData($_GET['global']) : "";
+$error = isset($_GET['error']) && !empty($_GET['error']) ? validData($_GET['error']) : "";
 $global_action = isset($_GET['global_action']) && !empty($_GET['global_action']) ? validData($_GET['global_action']) : "";
 $admin_action = isset($_GET['admin_action']) && !empty($_GET['admin_action']) ? validData($_GET['admin_action']) : "";
 $user_action = isset($_GET['user_action']) && !empty($_GET['user_action']) ? validData($_GET['user_action']) : "";
@@ -62,6 +63,13 @@ if (!empty($user)) {
 } else if (!empty($user_action)) {
    try {
       Route::action('user_action', $user_action);
+   } catch (Exception $e) {
+      echo '<p>Erreur : ' . $e . '.</p>';
+      Route::goTo('error', '404');
+   }
+} else if (!empty($error)) {
+   try {
+      Route::goTo('error', $error);
    } catch (Exception $e) {
       echo '<p>Erreur : ' . $e . '.</p>';
       Route::goTo('error', '404');

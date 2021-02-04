@@ -23,7 +23,13 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 <body>
    <header class="main-head">
       <h1 class="main-head-title">
-         <?= $pageTitle ?? "Rencontre"; ?>
+         <?php
+         if(isset($_COOKIE['firstname']) && !empty($_COOKIE['firstname'])){
+            echo ucfirst($_COOKIE['firstname']).' <3 - '.$pageTitle ?? "Rencontre";
+         }else{
+            echo $pageTitle ?? "Rencontre";
+         }
+         ;?>
       </h1>
       <?= $mainNav ?? '
          <nav class="main-nav">
@@ -35,7 +41,13 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                   <a href="?user=lovers" class="main-menu-links">
                      Lovers
                   </a>
-               </li><li class="main-menu-items">
+               </li>
+               <li class="main-menu-items">
+               <a href="?user=profile" class="main-menu-links">
+                  Mes informations
+               </a>
+            </li>
+               <li class="main-menu-items">
                <a href="?user_action=user_deconnexion" class="main-menu-links">
                   Déconnexion
                </a>
@@ -50,11 +62,6 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                <li class="main-menu-items">
                   <a href="?user=user_connexion" class="main-menu-links">
                      Connexion
-                  </a>
-               </li>
-               <li class="main-menu-items">
-                  <a href="?admin=admin_connexion" class="main-menu-links">
-                     Modération
                   </a>
                </li>';
       }
