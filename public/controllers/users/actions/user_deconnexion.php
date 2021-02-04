@@ -7,33 +7,33 @@ if (session_status() != PHP_SESSION_ACTIVE) {
 session_destroy();
 
 //Destruction des cookies
-// setcookie('user_id', false, -1);
+setcookie('user_id', false);
 unset($_COOKIE['user_id']);
 
-// setcookie('search', false, -1);
+setcookie('search', false);
 unset($_COOKIE['search']);
 
-// setcookie('lastname', false, -1);
+setcookie('lastname', false);
 unset($_COOKIE['lastname']);
 
-// setcookie('gender', false, -1);
+setcookie('gender', false);
 unset($_COOKIE['gender']);
 
-// setcookie('firstname', false, -1);
+setcookie('firstname', false);
 unset($_COOKIE['firstname']);
 
-// setcookie('email', false, -1);
+setcookie('email', false);
 unset($_COOKIE['email']);
 
-// setcookie('cp', false, -1);
+setcookie('cp', false);
 unset($_COOKIE['cp']);
 
-// setcookie('age', false, -1);
+setcookie('age', false);
 unset($_COOKIE['age']);
 
-// setcookie('PHPSESSID', false, -1);
+setcookie('PHPSESSID', false);
 unset($_COOKIE['PHPSESSID']);
 
 var_dump($_COOKIE);
 
-// header('Location:?globals=welcome');
+header('Location:?globals=welcome');
