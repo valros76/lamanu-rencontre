@@ -46,7 +46,7 @@ if(
       $errors[] = ["search_error" => "Le format de la recherche de profil n'est pas bon.\r\n"];
    }
    if(!empty($errors)){
-      var_dump($error);
+      var_dump($errors);
       die();
    }else{
       if (!file_exists($json_path)) {
