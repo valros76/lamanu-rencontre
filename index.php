@@ -4,6 +4,7 @@ if (session_status() != PHP_SESSION_ACTIVE) {
    session_start();
 }
 
+// require 'public/utils/constants.php';
 require 'public/utils/regex.php';
 require 'public/utils/validData.php';
 require 'public/utils/createCookie.php';
