@@ -444,3 +444,127 @@ h6 {
   font-weight: 600;
   text-shadow: 1px 0.5px 1px #000;
 }
+
+.chat-container{
+  width:calc(100% - 32px);
+  display:grid;
+  grid-template-columns:repeat(3,minmax(50px, 1fr));
+  grid-auto-rows:minmax(20px, auto);
+  grid-auto-flow:row dense;
+  gap:0;
+  margin:1em auto;
+  background-color:#252525;
+  grid-column:1/-1;
+}
+
+.chat-infos{
+  width:100%;
+  max-height:20vh;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(50px, 1fr));
+  grid-auto-rows:minmax(40px, 1fr);
+  grid-auto-flow:row dense;
+  gap:0.25em;
+  overflow-x:hidden;
+  overflow-y:auto;
+  word-wrap:break-word;
+  background-color:var(--bg-color2);
+  color:#fff;
+  grid-column:1/-1;
+  grid-row:1;
+}
+
+.chat-infos p{
+  text-align:center;
+}
+
+.chat-view{
+  width:100%;
+  min-height:60vh;
+  max-height:60vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  gap:1em;
+  padding:1em;
+  overflow-x:hidden;
+  overflow-y:auto;
+  word-wrap:break-word;
+  background-color:#fff5f5;
+  grid-column:1/-1;
+  grid-row:2;
+}
+
+.chat-message-container{
+  max-width:80%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(50px, auto));
+  grid-auto-rows:auto;
+  grid-auto-flow:row dense;
+  gap:0.25em;
+  padding:0.5em;
+  border-radius:8px;
+  gap:0.25em;
+}
+.my-message{
+  border-bottom-left-radius:0;
+  background-color:#fff;
+  box-shadow:0px 0px 2px 0px var(--bg-color2);
+  align-self:flex-start;
+}
+.target-message{
+  border-bottom-right-radius:0;
+  background-color:#f1f1f1;
+  box-shadow:0px 0px 2px 0px var(--debug-male);
+  align-self:flex-end;
+}
+
+.message-avatar-container{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  grid-row:1;
+  overflow:hidden;
+  box-shadow:0px 0px 1px 1px #e6e6e6;
+}
+.my-message-avatar-container{
+  grid-column:1;
+  margin-right:auto;
+}
+.target-message-avatar-container{
+  grid-column:3;
+  margin-left:auto;
+}
+
+.message-content{
+  grid-column:1/-1;
+  grid-row:2;
+  font-size:14px;
+  font-family:sans-serif;
+  font-weight:500;
+  color:#252525;
+}
+.my-message-content{
+  text-align:left;
+}
+.target-message-content{
+  text-align:right;
+}
+
+.message-infos{
+  grid-column:1/-1;
+  grid-row:3;
+  padding:0.25em;
+  font-size:12px;
+  font-weight:300;
+  color:#454545;
+}
+.my-message-infos{
+  text-align:right;
+}
+.target-message-infos{
+  text-align:left;
+}
+
+

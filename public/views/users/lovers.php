@@ -55,7 +55,7 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
          echo '</div>';
          if (isset($lovers_list[$lover]['firstname'])) {
             echo '
-            <a href="?user_action=chat_with&target=' . $lovers_list[$lover]['firstname'] . '" class="user-profile-link">Chatter avec ' . $lovers_list[$lover]['firstname'] . '</a>';
+            <a href="?user=chat" class="user-profile-link">Chatter avec ' . $lovers_list[$lover]['firstname'] . '</a>';
          }
          echo '</div>';
          if($count_users < $lovers_list){
