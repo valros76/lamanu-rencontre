@@ -47,6 +47,10 @@ ob_start();
             </p>
          </div>
       </div>
+      <form action="#" method="POST" class="message-write-form">
+         <textarea name="chat-write" class="chat-write-textarea"></textarea>
+         <input type="submit" value="Send" class="chat-send-btn">
+      </form>
    </div>
 </section>
 
