@@ -237,20 +237,22 @@ h6 {
   padding: 0.25em;
   border-bottom: 5px solid transparent;
   font-family: "Cambria", system-ui, sans-serif;
+  outline:none;
 }
 .main-menu-links:hover,
 .main-menu-links:visited:hover {
-  color: #fff;
-  border-bottom: 5px solid #fff;
+  color: var(--bg-color1);
+  border-bottom: 5px solid var(--bg-color1);
 }
 .main-menu-links:active,
 .main-menu-links:visited:active {
-  color: #fff;
+  color: var(--bg-color1);
+  border-bottom: 5px solid var(--bg-color1);
 }
 .main-menu-links:focus,
 .main-menu-links:visited:focus {
-  color: #fff;
-  border-bottom: 5px solid #fff;
+  color: var(--bg-color2);
+  border-bottom: 5px solid var(--bg-color2);
 }
 
 .main-content {
