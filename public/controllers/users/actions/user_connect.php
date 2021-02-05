@@ -12,7 +12,7 @@ if (!empty($email) && !empty($password)) {
    if (file_exists($json_path)) {
       $json_datas = file_get_contents($json_path);
       $array_json = json_decode($json_datas, true);
-      for ($count = 0; $count <= count($array_json); $count++) {
+      for ($count = 0; $count < count($array_json); $count++) {
          if (in_array($email, $array_json[$count])) {
             $stocked_password = isset($array_json[$count]['password']) && !empty($array_json[$count]['password']) ? $array_json[$count]['password'] : '';
             createCookie('user_id', $count, time() + 24 * 3600, null, null, false, true);
