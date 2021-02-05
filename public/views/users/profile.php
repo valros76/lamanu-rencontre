@@ -9,6 +9,7 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
       <h2 class="main-sections-title">
          Mes informations
       </h2>
+      <p>User ID : <?= $_COOKIE['user_id']; ?></p>
       <?php
       if($infos != false){
       foreach ($infos as $name => $value) {

@@ -545,6 +545,10 @@ h6 {
   grid-column:3;
   margin-left:auto;
 }
+.message-avatar{
+  object-fit:fill;
+  object-position:center;
+}
 
 .message-content{
   grid-column:1/-1;
