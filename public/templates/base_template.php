@@ -21,6 +21,7 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 </head>
 
 <body>
+   <div class="errors-notif"><span class="errors-notif-content">!</span></div>
    <header class="main-head">
       <h1 class="main-head-title">
          <?php
@@ -93,6 +94,7 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
 
    <?= $mainFooter ?? ""; ?>
    <script src="public/sources/js/menu-wrapper.js"></script>
+   <script src="public/sources/js/errors-modal.js"></script>
    <?= $scripts ?? ""; ?>
 </body>
 

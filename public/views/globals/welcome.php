@@ -15,7 +15,7 @@ ob_start();; ?>
       Pour utiliser pleinement notre service, merci de <a href="?user=user_inscription" class="inline-links">créer un compte</a> en cliquant sur le lien d'inscription.
    </p>-->
    <video src="public/assets/videos/montage_video_lamanurencontre.webm" class="welcome-video" muted controls></video>
-   <form action="?user_action=user_register" method="post" class="inscription-form">
+   <form action="?user_action=user_register" method="post" class="inscription-form" enctype="multipart/form-data">
       <div class="inscription-formgroup formgroup-1">
          <label for="lastname">*Nom :</label>
          <input type="text" name="lastname" id="lastname" placeholder="Doe" required />
@@ -45,6 +45,10 @@ ob_start();; ?>
          <option value="homme">Un homme</option>
          <option value="femme" selected>Une femme</option>
       </select>
+      <label for="file">Avatar :</label>
+      <input type="file" name="file" id="file" accept=".jpeg,.png,.jpg,.webp" required/>
+      <figure id="img-preview-container">
+      </figure>
       </div>
       <input type="submit" value="Rencontrez nos célibataires" />
    </form>
@@ -52,4 +56,5 @@ ob_start();; ?>
 
 <?php
 $mainContent = ob_get_clean();
+$scripts = '<script src="public/sources/js/img-preview.js" defer></script>';
 require 'public/templates/base_template.php';; ?>

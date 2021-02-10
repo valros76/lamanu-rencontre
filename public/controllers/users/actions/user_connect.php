@@ -31,9 +31,20 @@ if (!empty($email) && !empty($password)) {
    } else {
       $errors[] = ['password_error' => 'Mot de passe inconnu.\r\n'];
    }
-   if (!empty($errors)) {
-      var_dump($errors);
-      die();
+   if (!empty($errors)) {; ?>
+      <div class="errors-modal">
+         <i class="close-errors-modal">&times;</i>
+         <div class="errors-container">
+            <?php
+            foreach ($errors as $error) {
+               foreach ($error as $name => $value) {
+                  echo '<p>' . $name . ' : ' . str_replace('\r\n', '', $value) . '</p>';
+               }
+            }; ?>
+         </div>
+      </div>
+<?php
+      Route::goTo('user', 'user_connexion');
    } else {
       Route::goTo('user', 'lovers');
    }

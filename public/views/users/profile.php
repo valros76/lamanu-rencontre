@@ -5,7 +5,7 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
    require "public/controllers/users_controller.php";
    $infos = showUserProfile($_COOKIE['user_id']);
    ob_start();; ?>
-   <section class="main-section">
+   <section class="main-sections">
       <h2 class="main-sections-title">
          Mes informations
       </h2>
@@ -13,22 +13,23 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
       <?php
       if($infos != false){
       foreach ($infos as $name => $value) {
-         if ($name != 'password' && !empty($value)) {; ?>
+         if ($name != 'password' && $name != 'picture' && !empty($value)) {; ?>
             <p><?= $name . ' : ' . $value; ?></p>
       <?php
          }
-         if (empty($name)) {
+         if (true) {
             switch ($name) {
-               case 'picture': 
+               case (!empty($name) && $name =='picture' && isset($_COOKIE['picture']) && !empty($_COOKIE['picture']) && file_exists($_COOKIE['picture'])): 
                ;?>
-                  <form action="" method="" class="" enctype="multipart/form-data">
-               
-                  </form>
+               <p>Avatar :</p>
+               <div class="img-profile-container">
+                  <img src="<?= $_COOKIE['picture'] ;?>" alt="<?= $_COOKIE['user_id'].' avatar';?>" class="img-preview"/>
+               </div>
                <?php   
                break;
-               case 'description':
+               case (!empty($name) && $name =='description' && isset($_COOKIE['description']) && !empty($_COOKIE['description'])):
                ;?>
-
+                  <p><?= $_COOKIE['description'] ;?></p>
                <?php
                break;
                default:
@@ -39,6 +40,7 @@ if (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id'])) {
       }else{
          Route::goTo('error',500);
       }; ?>
+      <p><a class="user-profile-link" href="https://meetic.fr">Take my money</a></p>
    </section>
 <?php
    $mainContent = ob_get_clean();
